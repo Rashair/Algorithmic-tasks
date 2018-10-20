@@ -1,7 +1,6 @@
 #ifndef BALLS_H_INCLUDED
 #define BALLS_H_INCLUDED
 
-void balls();
 inline int skip(int);
 void possib(int k, int level=0);
 bool sequence(int k, bool swaped);
