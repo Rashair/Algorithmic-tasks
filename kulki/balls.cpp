@@ -18,17 +18,22 @@ int dots;
 
 int main(){
     ios::sync_with_stdio(false);
+    
     for(int i=0; i<bsize_square; ++i){
         cin>>board[i];
     }
+    
     dots=skip(0);
     possib(dots);
+    
     cout<<mov_num+1<<"\n";
     int i=0;
     while(i<=mov_num){
         cout<<(moves[i][0]/bsize)+1<<" "<<(moves[i][0]%bsize)+1<<" "<<(moves[i][1]/bsize)+1<<" "<<(moves[i][1]%bsize)+1<<"\n";
         ++i;
     }
+    
+    return 0;
 }
 
 int skip(int k){
