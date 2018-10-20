@@ -1,0 +1,6 @@
+#ifndef SORCERER_DUNGEON_H_INCLUDED
+#define SORCERER_DUNGEON_H_INCLUDED
+
+void sorcerer_dungeon();
+
+#endif // SORCERER_DUNGEON_H_INCLUDED
