@@ -6,19 +6,25 @@
 using namespace std;
 #include "sorcerer_dungeon.h"
 
-void sorcerer_dungeon(){
+int main(){
+    ios::sync_with_stdio(false);
+    
     int Z;
     cin>>Z;
+    
     while(Z--){
         int m,n;
         cin>>m>>n;
+        
         char dungeon[m][n];
         pair <int, int> sorc;
         pair <int, int> out;
         vector <pair <int, int> > input;
+        
         for(int i=0; i<m; ++i){
             for(int j=0; j<n; ++j){
                 cin>>dungeon[i][j];
+                
                 if(dungeon[i][j]=='@'){
                     sorc.first=i;
                     sorc.second=j;
@@ -27,6 +33,7 @@ void sorcerer_dungeon(){
                     out.first=i;
                     out.second=j;
                 }
+                
                 if(dungeon[i][j]!='#'){
                     if(i>0)
                         if(dungeon[i-1][j]!='#') input.push_back(make_pair((i-1)*n+j , i*n+j));
@@ -35,6 +42,7 @@ void sorcerer_dungeon(){
                 }
             }
         }
+        
         vector <int> way[n*m+n];
         for(const auto &ver : input){
            way[ver.first].push_back(ver.second);
@@ -59,8 +67,11 @@ void sorcerer_dungeon(){
                 }
             }
         }
+        
         int t=distance[maze_exit];
         if(t!=-1) cout<<t<<"\n";
         else cout<<"NIE"<<"\n";
     }
+    
+    return 0;
 }
