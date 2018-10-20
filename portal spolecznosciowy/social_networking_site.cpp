@@ -4,7 +4,6 @@
 #include <cstring>
 
 using namespace std;
-#include "social_networking_site.h"
 
 int main(){
     ios::sync_with_stdio(false);
