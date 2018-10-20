@@ -4,7 +4,6 @@
 #include <cstring>
 
 using namespace std;
-#include "sorcerer_dungeon.h"
 
 int main(){
     ios::sync_with_stdio(false);
