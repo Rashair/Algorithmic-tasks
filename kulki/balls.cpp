@@ -16,7 +16,8 @@ map <string,int> states;
 int mov_num=bsize;
 int dots;
 
-void balls(){
+int main(){
+    ios::sync_with_stdio(false);
     for(int i=0; i<bsize_square; ++i){
         cin>>board[i];
     }
